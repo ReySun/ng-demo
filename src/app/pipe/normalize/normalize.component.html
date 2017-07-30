@@ -1,0 +1,148 @@
+<alert type="info">
+    <p>uppercase lowercase</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
+    <p>{{ 'Angular' | uppercase }}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
+    <p>{{ 'Angular' | uppercase }}</p>
+</alert>
+
+
+<alert type="info">
+    <p>Decimal Pipe</p>
+</alert>
+<alert type='warning'>
+    <p ngNonBindable>{{ { minIntegerDigits }.{ minFractionDigits }-{ maxFractionDigits } }}</p>
+    <ol>
+        <li>minIntegerDigits 是最小的整数位数，默认是1。</li>
+        <li>minFractionDigits 表示最小的小数位数，默认是0。</li>
+        <li>maxFractionDigits 表示最大的小数位数，默认是3。</li>
+    </ol>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{pi {{pi}} }}</p>
+    <p>pi {{pi}}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ pi (.5-5): {{pi | number:'.5-5'}} }}</p>
+    <p>pi (.5-5): {{pi | number:'.5-5'}}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ pi (2.10-10): {{pi | number:'2.10-10'}} }}</p>
+    <p>pi (2.10-10): {{pi | number:'2.10-10'}}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ pi (.3-3): {{pi | number:'.3-3'}} }}</p>
+    <p>pi (.3-3): {{pi | number:'.3-3'}}</p>
+</alert>
+
+
+<alert type="info">
+    <p>Currency Pipe</p>
+</alert>
+<alert type='warning'>
+    <p ngNonBindable>{{ currency[:currencyCode[:symbolDisplay[:digitInfo]]] }}</p>
+    <p>也就是说在currency管道后用分号分隔不同的属性设置</p>
+</alert>
+<alert type="success">
+    <p>a :{{a}}</p>
+    <p ngNonBindable>{{ a in USD: {{a | currency:'USD':true}} }}</p>
+    <p>a in USD: {{a | currency:'USD':true}}</p>
+</alert>
+<alert type="success">
+    <p>b :{{b}}</p>
+    <p ngNonBindable>{{ b in CNY: {{b | currency:'CNY':false:'4.2-2'}} }}</p>
+    <p>b in CNY: {{b | currency:'CNY':false:'4.2-2'}}</p>
+</alert>
+
+
+<alert type="info">
+    <p>Percent Pipe</p>
+</alert>
+<alert type='warning'>
+    <p>百分数的整数位和小数位的规则也和上面提到的Decimal Pipe和Currency Pipe一致</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ myNum : {{myNum}} }}</p>
+    <p>myNum : {{myNum}}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ myNum : {{myNum | percent}} }}</p>
+    <p>myNum : {{myNum | percent}}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ myNum (3.2-2) : {{myNum | percent:'3.2-2'}} }}</p>
+    <p>myNum (3.2-2) : {{myNum | percent:'3.2-2'}}</p>
+</alert>
+
+
+<alert type="info">
+    <p>Json Pipe</p>
+</alert>
+<alert type='success'>
+    <p>Without JSON pipe:</p>
+    <pre>{{object}}</pre>
+</alert>
+<alert type="success">
+    <p>With JSON pipe:</p>
+    <pre>{{object | json}}</pre>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ { name: 'semlinker' } | json }}</p>
+    <p>{{ { name: 'semlinker' } | json }}</p>
+</alert>
+
+
+<alert type="info">
+    <p>Date Pipe</p>
+</alert>
+<alert type='warning'>
+    <p>百分数的整数位和小数位的规则也和上面提到的Decimal Pipe和Currency Pipe一致</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ today | date: 'shortTime' }}</p>
+    <p>{{ today | date: 'shortTime' }}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ today | date: "MM/dd/yy" }}</p>
+    <p>{{ today | date: "MM/dd/yy" }}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ today | date: "medium" }}</p>
+    <p>{{ today | date: "medium" }}</p>
+</alert>
+
+
+<alert type='danger'>
+    <p>1. 管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：</p>
+    <p>2. 多个管道连接在一起，组成管道链对数据进行处理。</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ 'semlinker' | slice:0:3 }}</p>
+    <p>{{ 'semlinker' | slice:0:3 }}</p>
+</alert>
+<alert type="success">
+    <p ngNonBindable>{{ 'semlinker' | slice:0:3 | uppercase }}</p>
+    <p>{{ 'semlinker' | slice:0:3 | uppercase }}</p>
+</alert>
+
+
+<alert type="info">
+    <p>自定义 Pipe</p>
+</alert>
+<alert type='success'>
+    <p>{{ today | date: "medium" }}</p>
+    <p ngNonBindable>{{ today | date: "medium" | trimSpace }}</p>
+    <p>{{ today | date: "medium" | trimSpace }}</p>
+</alert>
+<alert type='success'>
+    <p ngNonBindable>{{ 'semlinker' | welcome }}</p>
+    <p>{{ 'semlinker' | welcome }}</p>
+</alert>
+<alert type='success'>
+    <p ngNonBindable>{{ 'lo' | repeat:3 }}</p>
+    <p>{{ 'lo' | repeat:3 }}</p>
+</alert>

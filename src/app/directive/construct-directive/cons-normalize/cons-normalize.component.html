@@ -1,0 +1,59 @@
+<alert type='info'>
+    ngif <button class="btn btn-primary" (click)='toggleCondition()'>切换</button>
+</alert>
+<alert type='success'>
+    <p *ngIf='condition'>自带的ngIf指令</p>
+</alert>
+
+
+<alert type='info'>
+    自定义 结构指令
+</alert>
+<alert type='success'>
+    <p *unIf='condition'>重写的ngIf指令</p>
+</alert>
+
+
+<alert type='info'>
+    ngfor
+</alert>
+<alert type='success'>
+    <ul>
+        <li *ngFor="let fruit of fruitsList">{{fruit}}</li>
+    </ul>
+</alert>
+
+
+<alert type='info'>
+    NgForTrackBy
+</alert>
+<alert type='warning'>
+    <p>ngFor指令有时性能会比较差，特别是在大型列表中。对一个条目的小改动都会导致级联的 DOM操作。比如，当通过重新从服务器来刷新通讯录，刷新后的列表可能包含很多（如果不 是全部的话）以前显示过的联系人。但在Angular看来，它不知道哪些是以前就存在过的，只能清理旧列表、舍弃那些DOM元素，并用新的DOM元素来重建一个新列表。 解决这个问 题，可以通过追踪函数来避免这种折腾。追踪函数会告诉Angular：我们知道两个具有相同 user.id的对象是同一个联系人
+    </p>
+</alert>
+<alert type='success'>
+    <ul>
+        <li *ngFor="let user of users; trackBy:trackByUsers">({{user.id}}) {{user.name}}</li>
+    </ul>
+</alert>
+
+
+<alert type='info'>
+    ngswitch
+    <select name="changeMyVar" id="" (change)='changeMyVar($event)'>
+		<option value="A">A</option>
+		<option value="B">B</option>
+		<option value="C">C</option>
+		<option value="D">D</option>
+	</select>
+</alert>
+<!--待改进  -->
+<alert type='success'>
+    <div [ngSwitch]="myVar">
+        <div *ngSwitchCase="'A'">Var is A</div>
+        <div *ngSwitchCase="'B'">Var is B</div>
+        <div *ngSwitchCase="'C'">Var is C</div>
+        <div *ngSwitchCase="'C'">Var is C, too</div>
+        <div *ngSwitchDefault>Var is something else</div>
+    </div>
+</alert>

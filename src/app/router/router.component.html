@@ -1,0 +1,14 @@
+<!-- <alert type='info'>
+    path
+</alert>
+<alert path='success'>
+    <ng-path></ng-path>
+</alert> -->
+<div>
+    <button [routerLink]='["path",1]'>path/1</button>
+    <button [routerLink]='["path",2]'>path/2</button>
+    <button [routerLink]='"query"' [queryParams]="{limit: 5}" >query</button>
+    <button [routerLink]='"vip"' >vip</button>
+</div>
+<router-outlet></router-outlet>
+<!-- <router-outlet name="aux"></router-outlet> -->
