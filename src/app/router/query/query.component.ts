@@ -17,7 +17,7 @@ export class QueryComponent implements OnInit {
 		this.sub.unsubscribe();
 	}
 	getContacts() {
-		console.log(this._ActivatedRoute.queryParams.value);
+		// console.log(this._ActivatedRoute.queryParams._value);//does not exist on type 'Observable<Params>
 		this.sub = this._ActivatedRoute.queryParams.subscribe(value => {
 			this.limit = value
 		});
