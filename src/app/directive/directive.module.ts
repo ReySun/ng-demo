@@ -1,3 +1,4 @@
+import { AdService } from './dynamic/ad.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,6 +18,13 @@ import { NgtplcontextComponent } from './template/ngtplcontext.component';
 import { NgtplComponent } from './template/ngtpl.component';
 import { NgComptOutletComponent, AlertSuccessComponent, AlertDangerComponent } from './template/ngComptOutlet.component';
 import { NgTemplateComponent } from './template/ngtemplate.component';
+
+import { HeroJobAdComponent } from "./dynamic/hero-job-ad.component";
+import { HeroProfileComponent } from './dynamic/hero-profile.component';
+import { AdDemoComponent } from './dynamic/ad-demo.component';
+import { AdBannerComponent } from './dynamic/ad-banner.component';
+import { AdDirective } from './dynamic/ad.directive';
+
 @NgModule({
 	imports: [
 		CommonModule,
@@ -34,11 +42,21 @@ import { NgTemplateComponent } from './template/ngtemplate.component';
 		NgComptOutletComponent,
 		AlertSuccessComponent,
 		AlertDangerComponent,
-		NgTemplateComponent
+		NgTemplateComponent,
+		HeroProfileComponent,
+		HeroJobAdComponent,
+		AdDemoComponent,
+		AdBannerComponent,
+		AdDirective
 	],
 	entryComponents: [
 		AlertSuccessComponent,
-		AlertDangerComponent
+		AlertDangerComponent,
+		HeroJobAdComponent, 
+		HeroProfileComponent
+	],
+	providers:[
+		AdService
 	]
 })
 export class DirectiveModule { }

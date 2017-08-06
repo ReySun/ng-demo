@@ -30,6 +30,7 @@ export const examples: ExampleDef[] = [
     { label: 'attribute-directive', name: 'style', path: 'directive/attr-normalize' },
     { label: 'construct-directive', name: 'style', path: 'directive/cons-normalize' },
     { label: 'template', name: 'style', path: 'directive/template' },
+    { label: 'dynamic', name: 'style', path: 'directive/dynamic' },
     { label: 'router', name: 'style', path: 'router' },
 ];
 // { path: 'error', loadChildren: 'app/modules/error/error.module#ErrorModule' }, // 错误

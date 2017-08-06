@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AttrNormalizeComponent } from './attribute-directive/attr-normalize/attr-normalize.component';
 import { ConsNormalizeComponent } from './construct-directive/cons-normalize/cons-normalize.component';
 import { NgTemplateComponent } from './template/ngtemplate.component';
+import { AdDemoComponent } from './dynamic/ad-demo.component';
 
 export const DirectivRoutes: Routes = [
     {
@@ -23,6 +24,11 @@ export const DirectivRoutes: Routes = [
     {
         path: 'template',
         component: NgTemplateComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'dynamic',
+        component: AdDemoComponent,
         pathMatch: 'full'
     }
 ]
