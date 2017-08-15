@@ -22,6 +22,11 @@ export const appRoutes: Routes = [
         path: 'router',
         loadChildren: './router/router.module#NgRouterModule'
     }
+    ,
+    {
+        path: 'drag-drop',
+        loadChildren: './drag-drop/drag-drop.module#DragDropModule'
+    }
 ];
 
 export const examples: ExampleDef[] = [
@@ -32,6 +37,7 @@ export const examples: ExampleDef[] = [
     { label: 'template', name: 'style', path: 'directive/template' },
     { label: 'dynamic', name: 'style', path: 'directive/dynamic' },
     { label: 'router', name: 'style', path: 'router' },
+    { label: 'drag-drop', name: 'style', path: 'drag-drop' },
 ];
 // { path: 'error', loadChildren: 'app/modules/error/error.module#ErrorModule' }, // 错误
 //   { path: 'not-found', redirectTo: 'error/404' }, // 404 
