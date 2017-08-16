@@ -1,3 +1,4 @@
+import { SimpleSortableCompComponent, AlertDangerComponent, AlertSuccessComponent } from './dnd/simple-sortable-comp.component';
 import { EmbeddedSortableComponent } from './dnd/embedded-sortable.component';
 import { SimpleSortableCopyComponent } from './dnd/simple-sortable-copy.component';
 import { RecycleMultiSortableComponent } from './dnd/recycle-multi-sortable.component';
@@ -39,6 +40,13 @@ import { DragDropComponent } from './drag-drop-demo.component';
 		RecycleMultiSortableComponent,
 		SimpleSortableCopyComponent,
 		EmbeddedSortableComponent,
+		SimpleSortableCompComponent,
+		AlertDangerComponent,
+		AlertSuccessComponent,
+	],
+	entryComponents:[
+		AlertDangerComponent,
+		AlertSuccessComponent
 	]
 })
 export class DragDropModule { }
