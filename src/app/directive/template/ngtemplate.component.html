@@ -28,3 +28,20 @@
 <alert type='success'>
     <ng-compt-outlet></ng-compt-outlet>
 </alert>
+
+<alert type='info'>
+    ViewContainerRef
+</alert>
+<alert type='success'>
+    <ng-template #tpl>   
+        <button>看我html结构</button>   
+    </ng-template>   
+    <view-con-ref [template]="tpl"></view-con-ref>
+</alert>
+<alert type='success'>
+    <ng-template #tpl2>   
+        <button>看我html结构</button>   
+    </ng-template>   
+    <div #viewcontainer></div>
+</alert>
+

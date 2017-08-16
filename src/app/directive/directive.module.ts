@@ -1,3 +1,4 @@
+import { ViewContainerRefComponent } from './template/ViewContainerRef.component';
 import { AdService } from './dynamic/ad.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -47,7 +48,8 @@ import { AdDirective } from './dynamic/ad.directive';
 		HeroJobAdComponent,
 		AdDemoComponent,
 		AdBannerComponent,
-		AdDirective
+		AdDirective,
+		ViewContainerRefComponent
 	],
 	entryComponents: [
 		AlertSuccessComponent,

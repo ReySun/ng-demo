@@ -10,7 +10,7 @@ import { AdComponent } from './ad.component';
               <div class="ad-banner">
                 <h3>Advertisements</h3>
                 <ng-template ad-host></ng-template>
-              </div>
+			  </div>
             `
 })
 export class AdBannerComponent implements AfterViewInit, OnDestroy, OnInit {
