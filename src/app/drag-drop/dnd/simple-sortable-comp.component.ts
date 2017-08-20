@@ -21,7 +21,7 @@ export class AlertDangerComponent { }
                 Favorite drinks
             </div>
             <div class="panel-body">
-                <ul class="list-group" dnd-sortable-container [sortableData]="listOne">
+                <ul class="list-group" dnd-sortable-container [sortableData]="items">
                     <li *ngFor="let item of items; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item.name}}</li>
                 </ul>
             </div>
@@ -30,8 +30,8 @@ export class AlertDangerComponent { }
     <div class="col-sm-8">
         <div class="panel panel-default">
             <div class="panel-body">
-                <div *ngFor="let item of listOne">
-                     <ng-container  *ngComponentOutlet="item"></ng-container>
+                <div *ngFor="let item of items">
+                     <ng-container  *ngComponentOutlet="item.template"></ng-container>
                 </div>
             </div>
         </div>
