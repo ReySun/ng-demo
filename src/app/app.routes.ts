@@ -27,6 +27,11 @@ export const appRoutes: Routes = [
         path: 'drag-drop',
         loadChildren: './drag-drop/drag-drop.module#DragDropModule'
     }
+    ,
+    {
+        path: 'kissy',
+        loadChildren: './kissy/kissy.module#KissyModule'
+    }
 ];
 
 export const examples: ExampleDef[] = [
@@ -38,6 +43,7 @@ export const examples: ExampleDef[] = [
     { label: 'dynamic', name: 'style', path: 'directive/dynamic' },
     { label: 'router', name: 'style', path: 'router' },
     { label: 'drag-drop', name: 'style', path: 'drag-drop' },
+    { label: 'kissy', name: 'style', path: 'kissy' },
 ];
 // { path: 'error', loadChildren: 'app/modules/error/error.module#ErrorModule' }, // 错误
 //   { path: 'not-found', redirectTo: 'error/404' }, // 404 
