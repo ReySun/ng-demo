@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-// import * as KISSY from './js/seed-min'
-import * as haha from './js/hh'
-// import KISSY from 'kissy/build/seed'
-
-
 @Component({
 	selector: 'ng-kissy',
 	templateUrl: './kissy.component.html',
@@ -66,9 +61,6 @@ export class KissyComponent implements OnInit {
 	 }
 
 	ngOnInit() {
-		console.log(KISSY);
-		haha.ss()
-        console.log(haha.ss);
 	}
 
 }
